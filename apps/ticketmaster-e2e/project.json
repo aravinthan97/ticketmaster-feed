@@ -1,0 +1,9 @@
+{
+  "name": "ticketmaster-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ticketmaster-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["ticketmaster"],
+  "// targets": "to see all targets run: nx show project ticketmaster-e2e --web",
+  "targets": {}
+}
