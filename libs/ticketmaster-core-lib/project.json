@@ -1,0 +1,9 @@
+{
+  "name": "ticketmaster-core-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ticketmaster-core-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ticketmaster-core-lib --web",
+  "targets": {}
+}
