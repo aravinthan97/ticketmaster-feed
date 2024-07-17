@@ -1,11 +1,20 @@
+// index.spec.tsx
+
+import '@testing-library/jest-dom';
 import React from 'react';
 import { render } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+// import Index from '../app/page'; // Adjust the path to your Index component
+import { EventsFeedPage } from '@ticketmaster/ticketmaster-core-lib';
 
-import Page from '../app/page';
+const queryClient = new QueryClient();
 
-describe('Page', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<Page />);
-    expect(baseElement).toBeTruthy();
+describe('Index', () => {
+  it('should render EventsFeedPage', () => {
+    render(
+      <QueryClientProvider client={queryClient}>
+        <EventsFeedPage />
+      </QueryClientProvider>
+    );
   });
 });

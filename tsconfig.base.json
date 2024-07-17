@@ -14,7 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ticketmaster/shared": ["libs/shared/src/index.ts"],
+      "@ticketmaster/shared/server": ["libs/shared/src/server.ts"],
+      "@ticketmaster/ticketmaster-core-lib": [
+        "libs/ticketmaster-core-lib/src/index.ts"
+      ],
+      "@ticketmaster/ticketmaster-core-lib/server": [
+        "libs/ticketmaster-core-lib/src/server.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
