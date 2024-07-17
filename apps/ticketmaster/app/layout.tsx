@@ -1,4 +1,6 @@
 import './global.css';
+import { ChakraProviders } from './providers';
+import {QueryProvider} from './QueryClientProvider'
 
 export const metadata = {
   title: 'Welcome to ticketmaster',
@@ -11,8 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <QueryProvider>
+        <ChakraProviders>{children}</ChakraProviders>
+        </QueryProvider>
+      </body>
     </html>
+
+
   );
 }
