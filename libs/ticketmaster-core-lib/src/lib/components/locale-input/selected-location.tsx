@@ -12,7 +12,7 @@ import {
 import countryList from 'react-select-country-list';
 import { form, formatDate } from '@ticketmaster/shared';
 
-interface SelectedLocationProps {
+export interface SelectedLocationProps {
   onSelectionChange: (data: {
     country: string;
     startDate: string;

@@ -38,21 +38,7 @@ export const coreFetch = async (url: RequestInfo, method: FetchMethod, options: 
       const err = await response.json();
       console.log("API-ERROR: ", err);
       return {error: `API-ERROR: ${err && err.status ? err.status : response.status} - ${err && err.message ? err.message : response.statusText}`, status: response.status};
-      // Handle different status codes
-      // if (response.status === 404) {
-      //   // throw new Error('Resource not found');
-      //   NextResponse.json({ error: response.statusText }, { status: response.status })
-      // } else if (response.status === 401) {
-      //     // throw new Error('Unauthorized access');
-      //     NextResponse.json({ error: response.statusText }, { status: response.status })
-      // } else if (response.status === 500) {
-      //   // throw new Error('Internal server error');
-      //   NextResponse.json({ error: response.statusText }, { status: response.status })
-      // } else {
 
-      //   // throw new Error('Failed to fetch data');
-      //   NextResponse.json({ error: response.statusText }, { status: response.status })
-      // }
     }
 
 
@@ -72,6 +58,6 @@ export const coreFetch = async (url: RequestInfo, method: FetchMethod, options: 
     return { payload: data.payload ? data.payload : data, status: data?.status ? data.status : response.status};
   } catch (error) {
     console.error(error);
-    return {error: 'FE-ERROR-500 : Internal Server error from FE Server', status: 500 }; // Return an internal server error response
+    return {error: 'FE-ERROR-500 : Internal Server error ', status: 500 }; // Return an internal server error response
   }
 };

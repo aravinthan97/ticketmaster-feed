@@ -2,7 +2,9 @@
   "name": "@ticketmaster/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test:unit": "jest"
+  },
   "private": true,
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -14,6 +16,7 @@
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "framer-motion": "^11.3.2",
+    "jest-runner-groups": "^2.2.0",
     "msw": "^2.3.1",
     "next": "14.2.3",
     "react": "18.3.1",
