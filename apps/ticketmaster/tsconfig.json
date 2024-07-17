@@ -29,7 +29,8 @@
     "../../apps/ticketmaster/.next/types/**/*.ts",
     "../../dist/apps/ticketmaster/.next/types/**/*.ts",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "setupTests.ts"
   ],
   "exclude": [
     "node_modules",

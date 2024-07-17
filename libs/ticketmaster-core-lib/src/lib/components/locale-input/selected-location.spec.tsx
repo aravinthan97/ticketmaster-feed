@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Shared from './shared';
+import Card from './selected-location';
 
-describe('Shared', () => {
+describe('Card', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Shared />);
+    const { baseElement } = render(<Card />);
     expect(baseElement).toBeTruthy();
   });
 });
