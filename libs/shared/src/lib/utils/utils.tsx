@@ -2,6 +2,7 @@ import { FeedPayload } from '../models/shared-models';
 
 export const payloadPasser = (data: any): FeedPayload[] => {
   return data.map((item: any) => {
+    console.log(item,"data")
     // Find the image with the 4_3 ratio
     const image = item.images.find((img: any) => img?.ratio === '4_3')?.url;
 
@@ -11,6 +12,12 @@ export const payloadPasser = (data: any): FeedPayload[] => {
       date: item.dates.start.localDate as string,
       time: item.dates.start.localTime as string,
       image: image || ('' as string), // Default to empty string if no image found
+      pleaseNote:item.pleaseNote as string,
+      country:item._embedded.venues[0].country.name as string
+
+
+
+
     };
   });
 };

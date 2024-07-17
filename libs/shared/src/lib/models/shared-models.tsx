@@ -18,9 +18,8 @@ export interface FeedPayload {
     date: string;
     time: string;
     image: string;
-    location:string;
-    latitude:string;
-    longitude:string;
+    pleaseNote:string;
+    country:string;
 
   }
 

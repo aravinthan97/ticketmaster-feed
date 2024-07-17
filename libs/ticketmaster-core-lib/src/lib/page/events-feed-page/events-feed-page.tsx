@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { EventCard } from '../../components/card/card';
-import { SelectedLocation } from '../../components/locale-input/selected-location';
+import { SelectedLocation } from '../../components/form-input/selected-input';
 import {
   coreFetch,
   FeedPayload,

@@ -3,7 +3,7 @@
 
 // expoert components
 export * from './lib/components/card/card';
-export * from './lib/components/locale-input/selected-location';
+export * from './lib/components/form-input/selected-input';
 export * from './lib/components/event-card-skeleton/event-card-skeleton';
 
 // export page

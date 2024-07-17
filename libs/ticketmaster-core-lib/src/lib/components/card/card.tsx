@@ -6,6 +6,7 @@ import {
   Heading,
   Text,
   Image,
+  Divider,
 } from '@chakra-ui/react';
 import { FeedPayload } from '@ticketmaster/shared';
 
@@ -13,7 +14,7 @@ export interface EventCardProps {
   payload: FeedPayload;
 }
 
-export function EventCard({ payload  }: EventCardProps) {
+export function EventCard({ payload }: EventCardProps) {
   return (
     <Card
       direction={{ base: 'column', sm: 'row' }}
@@ -35,19 +36,26 @@ export function EventCard({ payload  }: EventCardProps) {
         <CardBody>
           <Heading size="md">{payload.name}</Heading>
 
-          <Text py="2">
-            Data:{payload.date} time:{payload.time}
+          <Text py="1">
+            <b>Data: </b>
+            {payload.date}
           </Text>
-          <Text py="2">
-            location:{payload.date}
+          <Text py="1">
+            <b>time: </b> {payload.time}
+          </Text>
+          <Text py="1">
+            <b>country: </b>
+            {payload.country}
           </Text>
         </CardBody>
-
-        <CardFooter>
-        <Text py="2">
-            latitiud :{payload.date} -   longtiud :{payload.date}
-          </Text>
-        </CardFooter>
+        {payload.pleaseNote ? (
+          <CardFooter>
+            <Text>
+              <b>Note: </b>
+              {payload.pleaseNote}
+            </Text>
+          </CardFooter>
+        ) : null}
       </Stack>
     </Card>
   );
